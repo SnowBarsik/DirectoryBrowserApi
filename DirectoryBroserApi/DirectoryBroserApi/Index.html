@@ -19,9 +19,9 @@
         </div><br />
 
         <div>
-            <a href="" ng-show="directory.ParentId != null" ng-click="explore(directory.ParentId)">Previous Folder </a>
-            <a href="" ng-click="start()">Drives </a>
-            <a href="" ng-click="explore(directory.Id)">Refresh </a>
+            <a href="" ng-show="directory.ParentId != null" ng-click="explore(directory.ParentId)">| Previous Folder |</a>
+            <a href="" ng-click="start()">| Drives |</a>
+            <a href="" ng-click="explore(directory.Id)">| Refresh |</a>
         </div>
 
         <table>
@@ -42,7 +42,7 @@
         </table>
 
         Current path: {{directory.FullName}} <br />
-        Browse path:<span ng-repeat="dir in directory.Path"><a href="" ng-click="explore(dir.Id)">{{dir.Name}}\</a></span> <br />
+        Browse path: <span ng-repeat="dir in directory.Path"><a href="" ng-click="explore(dir.Id)">{{dir.Name}}\</a></span> <br />
 
         Folders:
         <ul ng-repeat="dir in directory.CurrentDirs">
