@@ -1,0 +1,6 @@
+{
+  "name": "Directorybrowserapi",
+  "tagline": "Explore the directories on the hosting server",
+  "body": "DirectoryBrowserApi\r\n\r\nExplore directories on the hosting server\r\n\r\nPress on folder names to explore them\r\nUse link \"Previous folder\" to return to the parent directory,\r\nlink \"Drives\" to chose another driver,\r\nlink \"Refresh\" to update the current folder.\r\n\r\nYou also can press on a directory name in the \"Browse path\" to directly jump in a directory.\r\n\r\nCounting all files can be a long process, wait some time and it'll be there.\r\nFiles in protected folders will not be counted.\r\n\r\nPossible errors will be shown on the top.\r\n\r\nThe API is made to be consumed by the index.htlm page, and it is not recommended sending http requests directly.\r\nHowever, you can export the \"index.html\" and the JS files linked in it, and access to the Api from anywhere.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
