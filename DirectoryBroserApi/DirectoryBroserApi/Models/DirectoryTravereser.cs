@@ -63,16 +63,13 @@ namespace DirectoryBroserApi.Models
                     files = System.IO.Directory.GetFiles(currentDir);
                 }
 
-                catch (UnauthorizedAccessException e)
+                catch (UnauthorizedAccessException)
                 {
-
-                    Console.WriteLine(e.Message);
                     continue;
                 }
 
-                catch (System.IO.DirectoryNotFoundException e)
+                catch (System.IO.DirectoryNotFoundException)
                 {
-                    Console.WriteLine(e.Message);
                     continue;
                 }
 
@@ -83,7 +80,7 @@ namespace DirectoryBroserApi.Models
                         System.IO.FileInfo fi = new System.IO.FileInfo(file);
                         _fileCounter.AddCount(fi.Length);
                     }
-                    catch (System.IO.FileNotFoundException e)
+                    catch (System.IO.FileNotFoundException)
                     {
                         continue;
                     }
