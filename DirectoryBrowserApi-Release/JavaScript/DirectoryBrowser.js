@@ -9,19 +9,19 @@
         var canceller;
 
         var getRoot = function() {
-            $http.get("http://localhost:53349/api/directories")
+            $http.get(window.location.origin + "/api/directories")
                 .then(onRoot, onError);
         };
 
         var getDir = function(id) {
-            $http.get("http://localhost:53349/api/directories/" + id)
+            $http.get(window.location.origin + "/api/directories/" + id)
                 .then(onDir, onError);
         };
 
         var getCounter = function (id) {
             if (canceller) canceller.resolve();
             canceller = $q.defer();
-            $http.get("http://localhost:53349/api/counter/" + id, { timeout: canceller.promise })
+            $http.get("/api/counter/" + id, { timeout: canceller.promise })
                 .then(onCounter, onCountError);
         };
 
