@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "scripts/angular.min.min.js",
+    "inputFiles": [
+      "scripts/angular.min.js"
+    ]
+  },
+  {
+    "outputFileName": "JavaScript/DirectoryBrowser.min.js",
+    "inputFiles": [
+      "JavaScript/DirectoryBrowser.js"
+    ]
+  }
+]

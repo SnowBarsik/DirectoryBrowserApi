@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>DirectoryBrowserApi</title>
+    <meta charset="utf-8" />
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/JavaScript/DirectoryBrowser.js"></script>
+</head>
+<body ng-app="mainApp">
+
+    <div ng-controller="DirectoryBrowser">
+
+        <div ng-show="errors != null">
+            An error occured browsing the directory: {{errors.Message}}
+        </div><br />
+
+        <div ng-show="counterErrors != null">
+            An error occured counting the files: {{counterErrors.Message}}
+        </div><br />
+
+        <div>
+            <a href="" ng-show="directory.ParentId != null" ng-click="explore(directory.ParentId)">Previous Folder </a>
+            <a href="" ng-click="start()">Drives </a>
+            <a href="" ng-click="explore(directory.Id)">Refresh </a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Less 10Mb</th>
+                    <th>10Mb - 50Mb</th>
+                    <th>More 100Mb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{fileCounter.Smalls}}</td>
+                    <td>{{fileCounter.Mediums}}</td>
+                    <td>{{fileCounter.Bigs}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        Current path: {{directory.FullName}} <br />
+        Browse path:<span ng-repeat="dir in directory.Path"><a href="" ng-click="explore(dir.Id)">{{dir.Name}}\</a></span> <br />
+
+        Folders:
+        <ul ng-repeat="dir in directory.CurrentDirs">
+            <li>
+                <a href="" ng-click="explore(dir.Id)"> {{dir.Name}} </a>
+            </li>
+        </ul> <br />
+
+        Files:
+        <ul ng-repeat="file in directory.CurrentFiles">
+            <li>{{file}}</li>
+        </ul> <br />
+    </div>
+</body>
+</html>
