@@ -902,12 +902,9 @@
     </Compile>
     <Compile Include="Models\CurrentDirectory.cs" />
     <Compile Include="Models\Directory.cs" />
-    <Compile Include="Models\DirectoryOld.cs" />
     <Compile Include="Models\DirectoryBrowser.cs" />
     <Compile Include="Models\DirectoryTravereser.cs" />
-    <Compile Include="Models\File.cs" />
     <Compile Include="Models\FileCounter.cs" />
-    <Compile Include="Models\Dir.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
