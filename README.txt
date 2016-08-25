@@ -15,4 +15,3 @@ Files in protected folders will not be counted.
 Possible errors will be shown on the top.
 
 The API is made to be consumed by the index.htlm page, and it is not recommended sending http requests directly.
-However, you can export the "index.html" and the JS files linked in it, and access to the Api from anywhere.
