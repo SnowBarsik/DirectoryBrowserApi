@@ -1,6 +1,7 @@
 DirectoryBrowserApi
 
 Explore directories on the hosting server
+The table shows the count of all files in the current directory and all the subdirectories.
 
 Press on folder names to explore them
 Use link "Previous folder" to return to the parent directory,
