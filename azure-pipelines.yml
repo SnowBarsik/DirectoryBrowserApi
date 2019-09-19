@@ -52,4 +52,4 @@ steps:
     script: |
       # Write your PowerShell commands here.
       get-content -path README.md
-    workingDirectory: '$(System.ArtifactsDirectory)'
+    workingDirectory: '$(System.ArtifactsDirectory)/MyTestArtifact/'
