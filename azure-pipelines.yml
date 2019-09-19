@@ -51,5 +51,5 @@ steps:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      get-content -path README.md
+      get-content -path PeopleTable.deploy-readme.txt
     workingDirectory: '$(System.ArtifactsDirectory)/MyTestArtifact/'
